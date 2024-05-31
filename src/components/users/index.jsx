@@ -59,10 +59,10 @@ function Table() {
                         <td>{item.address}</td>
                         <td className='d-flex items-center justify-content-center text-center gap-3'>
                           <Link to={`/users/${item.id}`}>
-                          <box-icon name='show' type='solid' ></box-icon>
+                          <button className='btn btn-info'><box-icon name='show' type='solid' ></box-icon></button>
                           </Link> 
-                          <box-icon name='edit-alt' onClick={()=>editable(item.id)} ></box-icon> 
-                          <box-icon className='text-center' onClick={()=>deleteUser(item.id)} type='solid' name='trash'></box-icon> 
+                          <button className='btn btn-warning'><box-icon name='edit-alt' onClick={()=>editable(item.id)} ></box-icon></button> 
+                          <button className='btn btn-danger'><box-icon className='text-center' onClick={()=>deleteUser(item.id)} type='solid' name='trash'></box-icon></button> 
                           </td>
                       </tr>
                       ))
